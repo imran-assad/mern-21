@@ -7,10 +7,16 @@ app.listen(port, () => {
   console.log(`Port is listening ${port}`);
 });
 
-app.use((req, res) => {
-  console.log("request received");
-  res.send({
-    name: "Imran Asad",
-    color: "Red",
-  });
+app.get("/", (req, res) => {
+  console.log("This is home section");
+});
+app.get("/apple", (res, req) => {
+  console.log("this is apple");
+});
+app.get("/mango", (res, req) => {
+  console.log("this is mango section");
+});
+
+app.post("/banana", (res, req) => {
+  console.log("this is banana section");
 });
