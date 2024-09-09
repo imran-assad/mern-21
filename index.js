@@ -7,8 +7,8 @@ app.listen(3001, () => {
 });
 
 app.get("/register", (req, res) => {
-  let { name, password } = req.query;
-  res.send(`Welcome to the login page ${name}`);
+  let { user, password } = req.query;
+  res.send(`Welcome to the login page ${user}`);
 });
 
 app.post("/register", (req, res) => {
