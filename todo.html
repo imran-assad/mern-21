@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do List</title>
+  </head>
+  <body>
+    <input type="text" class="enter" />
+    <button>Add List</button>
+    <ul></ul>
+  </body>
+
+  <script>
+    let btn = document.querySelector("button");
+    let ul = document.querySelector("ul");
+    let inp = document.querySelector("input");
+
+    btn.addEventListener("click", function () {
+      let item = document.createElement("li");
+      item.innerText = inp.value;
+
+      let delbtn = document.createElement("button");
+      delbtn.innerText = "button";
+      delbtn.classList.add("delete");
+
+      item.appendChild(delbtn);
+      ul.appendChild(item);
+      inp.value = "";
+    });
+
+    let delbtns = document.querySelectorAll(".delete");
+
+    ul.addEventListener("click", function (e) {
+      if (e.target.classList.contains("delete")) {
+        let parent = e.target.parentElement;
+        parent.remove();
+      }
+    });
+  </script>
+</html>
