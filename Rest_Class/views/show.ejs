@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Single Post detail</title>
+    <title>Single Post Detail</title>
   </head>
   <body>
-    <h2>here is your post in detail</h2>
+    <h2>Here is your post in detail</h2>
+    <!-- Displaying the post ID -->
+    <p>Post ID: <%= post.id %></p>
+    <div class="post">
+      <!-- Displaying the username -->
+      <h3 class="user">@<%= post.username %></h3>
+      <!-- Displaying the post content -->
+      <h4>@<%= post.content %></h4>
+    </div>
   </body>
 </html>
